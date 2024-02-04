@@ -6,12 +6,14 @@ set_license('MIT')
 
 add_urls('https://github.com/TheCherno/imgui.git')
 add_versions('walnut', '1a96ac382aff490a85b5f70403d06adfdcb3b883')
+add_versions('1.89.0', '1a96ac382aff490a85b5f70403d06adfdcb3b883')
+add_versions('1.89.9', '781a4ffc674d98dfd2b4d42747e1cd27887fac36')
 
 add_configs('dx9', { description = 'Enable the dx9 backend', default = false, type = 'boolean' })
 add_configs('dx10', { description = 'Enable the dx10 backend', default = false, type = 'boolean' })
 add_configs('dx11', { description = 'Enable the dx11 backend', default = false, type = 'boolean' })
 add_configs('dx12', { description = 'Enable the dx12 backend', default = false, type = 'boolean' })
-add_configs('glfw', { description = 'Enable the glfw backend', default = false, type = 'boolean' })
+add_configs('glfw', { description = 'Enable the glfw backend', default = true, type = 'boolean' })
 add_configs('opengl2', { description = 'Enable the opengl2 backend', default = false, type = 'boolean' })
 add_configs('opengl3', { description = 'Enable the opengl3 backend', default = false, type = 'boolean' })
 add_configs('sdl2', { description = 'Enable the sdl2 backend with sdl2_renderer', default = false, type = 'boolean' })
@@ -20,7 +22,8 @@ add_configs(
     { description = 'Enable the sdl2 backend without sdl2_renderer', default = false, type = 'boolean' }
 )
 add_configs('sdl2_renderer', { description = 'Enable the sdl2 renderer backend', default = false, type = 'boolean' })
-add_configs('vulkan', { description = 'Enable the vulkan backend', default = false, type = 'boolean' })
+add_configs('vulkan', { description = 'Enable the vulkan backend', default = true, type = 'boolean' })
+add_configs('glfw_vulkan', { description = 'Enable the vulkan backend', default = false, type = 'boolean' })
 add_configs('win32', { description = 'Enable the win32 backend', default = false, type = 'boolean' })
 add_configs('wgpu', { description = 'Enable the wgpu backend', default = false, type = 'boolean' })
 add_configs(

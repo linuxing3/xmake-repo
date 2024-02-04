@@ -1,0 +1,9 @@
+{
+    find_program = {
+        ping = "/usr/bin/ping",
+        gzip = "/usr/bin/gzip",
+        git = "/usr/bin/git",
+        tar = "/usr/bin/tar",
+        unzip = "/usr/bin/unzip"
+    }
+}

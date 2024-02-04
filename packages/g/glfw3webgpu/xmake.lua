@@ -3,13 +3,10 @@ set_description('An extension for the GLFW library for using WebGPU native.')
 set_homepage('https://github.com/eliemichel/glfw3webgpu')
 set_license('MIT')
 
-add_urls(
-    'https://github.com/eliemichel/glfw3webgpu/archive/refs/tags/$(version).tar.gz',
-    'https://github.com/eliemichel/glfw3webgpu.git'
-)
+add_urls('https://github.com/eliemichel/glfw3webgpu.git')
 add_versions('1.1.0', '45d15f99a260fc8aeef6abd04408278163bbb08d')
 
-add_deps('wgpu-native', 'glfw')
+add_deps('wgpu-native', 'glfw-walnut')
 
 if is_plat('macosx', 'iphoneos') then
     add_frameworks('Metal', 'Foundation')
@@ -24,7 +21,7 @@ on_install('windows|x64', 'windows|x86', 'linux|x86_64', 'macosx|x86_64', 'macos
         [[
             add_rules("mode.debug", "mode.release")
 
-            add_requires("wgpu-native", "glfw")
+            add_requires("wgpu-native", "glfw-walnut")
 
             target("glfw3webgpu")
                 set_kind("$(kind)")
@@ -34,7 +31,8 @@ on_install('windows|x64', 'windows|x86', 'linux|x86_64', 'macosx|x86_64', 'macos
                 add_mxflags("-fno-objc-arc")
                 
                 add_packages("wgpu-native")
-                add_packages("glfw")
+                add_packages("glfw-walnut")
+                add_defines("WEBGPU_BACKEND")
                 
                 if is_plat("iphoneos", "macosx") then
                     add_frameworks("Metal", "Foundation")

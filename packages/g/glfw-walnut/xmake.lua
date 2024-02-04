@@ -11,7 +11,7 @@ add_urls('https://github.com/TheCherno/glfw.git')
 add_versions('walnut', 'c186bef662454c9a11a19e0773a8a7c07bd0aa47')
 add_configs('glfw_include', {
     description = 'Choose submodules enabled in glfw',
-    default = 'none',
+    default = 'vulkan',
     type = 'string',
     values = { 'none', 'vulkan', 'glu', 'glext', 'es2', 'es3' },
 })
