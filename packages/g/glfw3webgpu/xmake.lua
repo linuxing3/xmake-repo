@@ -32,7 +32,7 @@ on_install('windows|x64', 'windows|x86', 'linux|x86_64', 'macosx|x86_64', 'macos
                 
                 add_packages("wgpu-native")
                 add_packages("glfw-walnut")
-                add_defines("WEBGPU_BACKEND")
+                add_defines("WEBGPU_BACKEND=WGPU")
                 
                 if is_plat("iphoneos", "macosx") then
                     add_frameworks("Metal", "Foundation")
