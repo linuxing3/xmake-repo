@@ -14,7 +14,7 @@ if is_os('windows') then
         'src/null_joystick.c',
         'src/null_monitor.c',
         'src/null_window.c',
-        'src/win32_platform.c',
+        'src/platform.c',
         'src/vulkan.c',
         'src/window.c'
     )

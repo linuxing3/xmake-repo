@@ -20,6 +20,7 @@ if is_plat('linux') then
     add_extsources('apt::libglfw3-dev', 'pacman::glfw-x11')
 end
 
+add_deps('vulkan-headers')
 add_deps('cmake')
 add_deps('opengl', { optional = true })
 if is_plat('macosx') then
